@@ -1,9 +1,199 @@
 <!DOCTYPE html>
-<html>
-<head><title>Aryan Baki</title></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryan Baki — iOS Developer & ML/AI Engineer</title>
+<meta name="description" content="Aryan Baki — iOS developer building GetUp, and ML/AI Master's student at Western Governors University. Swift, Python, machine learning, backend.">
+<style>
+  :root{
+    --bg:#0b0e14; --bg2:#10141f; --card:#131826; --line:#232a3d;
+    --text:#e8ebf2; --muted:#9aa4b8; --accent:#5ee1a0; --accent2:#6ea8ff;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+  /* Nav */
+  nav{position:sticky;top:0;background:rgba(11,14,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+  nav .logo{font-weight:700;font-size:17px;color:var(--text)}
+  nav .logo span{color:var(--accent)}
+  nav .links a{color:var(--muted);margin-left:22px;font-size:14.5px}
+  nav .links a:hover{color:var(--text);text-decoration:none}
+  /* Hero */
+  .hero{padding:86px 0 64px;text-align:left}
+  .hero .tag{display:inline-block;border:1px solid var(--line);background:var(--bg2);color:var(--accent);font-size:13px;padding:4px 12px;border-radius:99px;margin-bottom:20px}
+  .hero h1{font-size:52px;line-height:1.08;letter-spacing:-1px}
+  .hero h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.sub{font-size:19px;color:var(--muted);max-width:640px;margin-top:18px}
+  .hero .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 22px;border-radius:10px;font-weight:600;font-size:15px}
+  .btn.primary{background:var(--accent);color:#08130c}
+  .btn.primary:hover{text-decoration:none;opacity:.92}
+  .btn.ghost{border:1px solid var(--line);color:var(--text);background:var(--bg2)}
+  .btn.ghost:hover{text-decoration:none;border-color:var(--muted)}
+  /* Sections */
+  section{padding:44px 0}
+  h2{font-size:27px;letter-spacing:-.5px;margin-bottom:6px}
+  h2 .dot{color:var(--accent)}
+  .section-sub{color:var(--muted);margin-bottom:26px;font-size:15.5px}
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card h3{font-size:17.5px;margin-bottom:7px}
+  .card p{color:var(--muted);font-size:14.5px}
+  .card .stack{margin-top:14px;display:flex;gap:6px;flex-wrap:wrap}
+  .pill{font-size:12px;color:var(--accent);border:1px solid var(--line);padding:2px 9px;border-radius:99px;background:var(--bg2)}
+  .card.featured{grid-column:span 2;border-color:#2c4a3a;background:linear-gradient(160deg,#14231b,#131826)}
+  @media(max-width:640px){.card.featured{grid-column:span 1}.hero h1{font-size:38px}}
+  /* Skills */
+  .skills{display:flex;flex-wrap:wrap;gap:9px}
+  .skill{border:1px solid var(--line);background:var(--bg2);padding:7px 15px;border-radius:99px;font-size:14.5px}
+  .skill b{color:var(--accent);font-weight:600}
+  /* Timeline */
+  .timeline{border-left:2px solid var(--line);padding-left:24px;display:grid;gap:26px}
+  .job{position:relative}
+  .job::before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+  .job h3{font-size:16.5px}
+  .job .when{color:var(--accent);font-size:13.5px;font-weight:600}
+  .job p{color:var(--muted);font-size:14.5px;max-width:680px}
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:36px 0 46px;margin-top:30px;color:var(--muted);font-size:14.5px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+</style>
+</head>
 <body>
-<h1>Aryan Baki</h1>
-<p>iOS Developer & ML/AI Master's student at WGU. Building GetUp.</p>
-<p><a href="https://github.com/aryanbaki">GitHub</a></p>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">aryanbaki<span>.me</span></div>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="https://github.com/aryanbaki" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tag">● Building GetUp · M.S. ML &amp; AI @ WGU, expected Jan 2027</div>
+    <h1>Aryan Baki<br><span class="grad">iOS Developer &amp; ML/AI Engineer</span></h1>
+    <p class="sub">I build iPhone apps in Swift and machine-learning projects in Python. My main project is <b style="color:var(--text)">GetUp</b>, a wake-up coach app with camera pose-detection missions — currently in TestFlight.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn ghost" href="https://github.com/aryanbaki" target="_blank" rel="noopener">github.com/aryanbaki</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About<span class="dot">.</span></h2>
+    <p class="section-sub" style="max-width:720px">B.S. in Computer Science and now a Master's in Machine Learning &amp; Artificial Intelligence at Western Governors University. I work across the stack — native iOS (Swift / SwiftUI, HealthKit, Screen Time APIs), Python ML pipelines, and backend APIs — and I ship: GetUp is live in TestFlight, and my project work is public on GitHub.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects<span class="dot">.</span></h2>
+    <p class="section-sub">Featured work — full list on <a href="https://github.com/aryanbaki" target="_blank" rel="noopener">GitHub</a>.</p>
+    <div class="grid">
+      <div class="card featured">
+        <h3>🌅 GetUp — Wake-Up Coach (iOS)</h3>
+        <p>An iPhone alarm app that makes you actually get up: morning missions counted by camera pose detection (squats, push-ups), math and photo challenges, plus Morning Lock app/website blocking and HealthKit sleep insights. Streaks, achievements, and a full sleep schedule system. In TestFlight now.</p>
+        <div class="stack"><span class="pill">Swift</span><span class="pill">SwiftUI</span><span class="pill">HealthKit</span><span class="pill">Pose Detection</span><span class="pill">Screen Time API</span></div>
+      </div>
+      <div class="card">
+        <h3>Trucky AI</h3>
+        <p>AI project built around trucking/logistics workflows.</p>
+        <div class="stack"><span class="pill">AI</span><span class="pill">Python</span></div>
+      </div>
+      <div class="card">
+        <h3>Visual Memory Search</h3>
+        <p>Search your photos by meaning, not filename — image understanding and retrieval.</p>
+        <div class="stack"><span class="pill">ML</span><span class="pill">Computer Vision</span></div>
+      </div>
+      <div class="card">
+        <h3>Gmail Inbox Agent</h3>
+        <p>An agent that triages and works through Gmail inboxes automatically.</p>
+        <div class="stack"><span class="pill">AI Agents</span><span class="pill">APIs</span></div>
+      </div>
+      <div class="card">
+        <h3>Back-End Travel Booking API</h3>
+        <p>Backend API for travel booking — flights, reservations, and data handling.</p>
+        <div class="stack"><span class="pill">Backend</span><span class="pill">REST API</span><span class="pill">SQL</span></div>
+      </div>
+      <div class="card">
+        <h3>Health Risk Model Optimization</h3>
+        <p>Machine-learning model optimization on health risk data.</p>
+        <div class="stack"><span class="pill">Python</span><span class="pill">ML</span></div>
+      </div>
+      <div class="card">
+        <h3>Attendance Clustering Pipeline</h3>
+        <p>Clustering pipeline over attendance data to surface patterns and groups.</p>
+        <div class="stack"><span class="pill">Python</span><span class="pill">Clustering</span><span class="pill">Data</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills<span class="dot">.</span></h2>
+    <p class="section-sub">What I work with day to day.</p>
+    <div class="skills">
+      <span class="skill"><b>Languages</b> · Swift, Python, SQL, TypeScript</span>
+      <span class="skill"><b>iOS</b> · SwiftUI, HealthKit, Screen Time, TestFlight</span>
+      <span class="skill"><b>ML &amp; AI</b> · Machine Learning, Data Analysis, Model Optimization</span>
+      <span class="skill"><b>Data</b> · Power BI, Visualization, Validation</span>
+      <span class="skill"><b>Backend</b> · APIs, Databases, Supabase</span>
+      <span class="skill"><b>Tools</b> · Git &amp; GitHub, Xcode, Unit Testing</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience &amp; Education<span class="dot">.</span></h2>
+    <p class="section-sub">Recent roles and study.</p>
+    <div class="timeline">
+      <div class="job">
+        <div class="when">AUG 2026 — JAN 2027 (EXPECTED)</div>
+        <h3>M.S. Machine Learning &amp; Artificial Intelligence — Western Governors University</h3>
+        <p>Master's degree in ML/AI, following a B.S. in Computer Science from WGU.</p>
+      </div>
+      <div class="job">
+        <div class="when">INTERNSHIP</div>
+        <h3>Data Science &amp; Machine Learning Intern — KSADS-COMP</h3>
+        <p>Data science and machine learning internship work — analysis, modeling, and reporting.</p>
+      </div>
+      <div class="job">
+        <div class="when">2026</div>
+        <h3>Avant Vision Co.</h3>
+        <p>Signed offer in August 2026 following a summer interview process.</p>
+      </div>
+      <div class="job">
+        <div class="when">JAN 2026 — OCT 2026</div>
+        <h3>Hourmark</h3>
+        <p>Product/software work — shipped app project experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Aryan Baki · Houston, TX</div>
+    <div><a href="https://github.com/aryanbaki" target="_blank" rel="noopener">GitHub</a> · <a href="https://aryanbaki.me">aryanbaki.me</a></div>
+  </div>
+</footer>
+
 </body>
 </html>
